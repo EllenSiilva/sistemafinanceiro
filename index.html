@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.Finance$</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="./assets/logo.svg" height="90">
+    </header>
+
+    <main class="container">
+
+        <section id="balance">
+            <h2 class="sr-only">Balanço</h2>
+
+            <div class="card">
+                <h3>
+                 <span>Entradas</span>
+                 <img src="./assets/entrada.svg" height="20">
+                </h3>
+                <p>R$ 5.000,00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                <span>Saídas</span>
+                <img src="./assets/saida.svg" height="20">
+               </h3>
+                <p>R$ 2.000,00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+
+                <span>Total</span>
+                <img src="./assets/total.svg" height="30">
+               </h3>
+                <p>R$ 3.000,00</p>
+            </div>
+
+        </section>
+
+        <section id="transaction">
+            <h2 class="sr-only">Transações</h2>
+
+            <a href="#" 
+            onclick="Modal.open()"
+            class="button new">+ Nova Transação</a>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="expense">-R$ 500,00</td>
+                        <td class="data" >23/01/2021</td>
+                        <td>
+                            <img src="./assets/saida.svg" height="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description">Criação website</td>
+                        <td class="income">-R$ 5.000,00</td>
+                        <td class="">23/01/2021</td>
+                        <td>
+                            <img src="./assets/saida.svg" height="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="description"d>internet</td>
+                        <td class="expense">-R$ 200,00</td>
+                        <td class="">23/01/2021</td>
+                        <td>
+                            <img src="./assets/saida.svg" height="30">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+    </main>
+
+     <div class="modal-overlay active">
+         <div class="modal">
+            <div class="form">
+                <h2>Nova Transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="sr-only" 
+                        for="description">Descrição</label>
+                        <input 
+                        type="text"
+                        id="description"
+                        name="description"
+                        placeholder="Descrição"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label class="sr-only" 
+                        for="amount">Descrição</label>
+                        <input 
+                        step="0.01"
+                        type="number"
+                        id="amount"
+                        name="description"
+                        placeholder="Descrição"
+                        >
+              
+
+                    <small>
+                        Use o sinal - (negativo) para despesas e, (virgula) para as casas decimais
+                    </small>
+                </div>
+                <div class="input-group">
+                    <label class="sr-only" 
+                    for="date">Data</label>
+                    <input 
+                    step="0.01"
+                    type="date"
+                    id="date"
+                    name="date"
+                    placeholder="Descrição"
+                    >
+                </div>
+
+                <div class="input-group actions">
+                    <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                    <button>Salvar</button>
+                </div>
+
+                </form>
+                </div>
+         </div>
+     </div>
+
+
+    <footer>
+        <p>dev finances$</p>
+    </footer>
+
+
+<script src="./script.js">
+   
+</script>
+
+</body>
+
+</html>
